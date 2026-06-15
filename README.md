@@ -1,7 +1,7 @@
-# Spatial Analysis & Data Pipelines: South African Education Data
+# Data & Spatial Analysis Pipelines: South African Education Data
 
 ## Project Overview
-This repository showcases reproducible workflows for processing, cleaning, and visualizing administrative education data in South Africa. The codebase bridges the gap between raw, highly stratified institutional databases (such as SA-SAMS schedules) and geographic information systems (GIS) to analyze curriculum distribution and institutional placement across provinces.
+This repository showcases reproducible workflows for processing, cleaning, and visualizing administrative education data in South Africa. The codebase bridges the gap between raw, highly stratified institutional databases (such as South African School Administration and Management System schedules) and geographic information systems (GIS) to analyze the distribution of schools across provinces.
 
 ### Key Technical Competencies Demonstrated:
 * **Data Wrangling & Pipeline Automation:** Cleaning inconsistent Excel structures, handling missing data slots (`NA` filtering), and executing cohort matching across term-level files using `tidyverse`.
