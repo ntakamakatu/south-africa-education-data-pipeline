@@ -11,7 +11,6 @@ library(readxl)
 library(writexl)
 
 # 2. Define Core Processing Function -------------------------------------------
-# Writing a reusable function demonstrates robust data engineering practices.
 process_sams_schedule <- function(file_path, term_number) {
   
   message(paste("Processing:", file_path, "for Term", term_number))
@@ -102,10 +101,9 @@ process_sams_schedule <- function(file_path, term_number) {
 # 3. Execute Batch Pipeline Execution via Iteration ---------------------------
 
 # Define metadata mapping matrix for target files
-# (This setup makes scaling to dozens of school files completely trivial)
 pipeline_metadata <- tibble(
   file = c("10.1.xls", "10.2.xls", "10.3.xls"),
-  term = c(1, 1, 1) # Adjust terms dynamically if files span different terms
+  term = c(1, 2, 3) # Adjust terms dynamically if files span different terms
 )
 
 # Read, clean, and bind all data frames vertically using functional mapping
