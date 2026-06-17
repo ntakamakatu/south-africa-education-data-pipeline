@@ -70,9 +70,8 @@ process_sams_schedule <- function(file_path, term_number) {
       `Outcome_Code`                                        = ...55
     ) %>%
     
-    # C. Dynamic Anonymization Layer (Strict Data Privacy compliance)
-    # Generates a deterministic cryptographic-style hash for reproducible tracking 
-    # without exposing PII (Personally Identifiable Information).
+    # C. Pseudonymization Layer (Strict Data Privacy compliance)
+    # Generates a deterministic, non-reversible-by-inspection identifier for tracking records without exposing PII (Personally Identifiable Information)
     mutate(
       Anon_ID = rlang::hash(paste0(Admission_Number, Date_of_Birth)),
       Birth_Year = substr(Date_of_Birth, 1, 4)
