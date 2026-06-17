@@ -43,7 +43,7 @@ process_sams_schedule <- function(file_path, term_number) {
     unite("Date_of_Birth", ...4, ...5, ...6, sep = "", remove = TRUE) %>%
     
     # Map raw columns to standardized, human-readable variable names
-    # Note: Explicit mappings prevent layout shifts across schedules
+    # Note: Maps fixed column positions from the known SA-SAMS export template, since the raw file has no header row
     select(
       `No.`                                                 = ...1,
       `Grade`,
