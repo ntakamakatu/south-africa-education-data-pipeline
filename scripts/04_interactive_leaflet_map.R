@@ -47,13 +47,13 @@ sector_colors <- colorFactor(
 
 # 4. Assemble Interactive Leaflet Canvas ---------------------------------------
 interactive_map <- leaflet(data = schools_clean) %>%
-  # Instantiate OpenStreetMap background mapping tile vector engine
+  # Add OpenStreetMap base tiles
   addTiles() %>% 
   
   # Center camera framework coordinates over general South African topography
   setView(lng = 25.0, lat = -29.0, zoom = 6) %>%
   
-  # Inject geocoded structural point markers
+  # Add school location markers
   addCircleMarkers(
     lng = ~GIS_Long, 
     lat = ~GIS_Lat,
